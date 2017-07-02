@@ -10,5 +10,34 @@ package com.epn;
  * @author Aspire
  */
 public class Persona {
+
+    int idpersona;
+    String usuario;
+    String contaseña;
+    
+    public int getIdpersona() {
+        return idpersona;
+    }
+
+    public void setIdpersona(int idpersona) {
+        this.idpersona = idpersona;
+    }
+
+    public String getUsuario() {
+        return usuario;
+    }
+
+    public void setUsuario(String usuario) {
+        this.usuario = usuario;
+    }
+
+    public String getContaseña() {
+        return contaseña;
+    }
+
+    public void setContaseña(String contaseña) {
+        this.contaseña = contaseña;
+    }
+    
     
 }

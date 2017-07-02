@@ -11,4 +11,23 @@ package com.epn;
  */
 public class Facultad {
     
+    int idfacultad;
+    String nombrefacultad;
+
+    public int getIdfacultad() {
+        return idfacultad;
+    }
+
+    public void setIdfacultad(int idfacultad) {
+        this.idfacultad = idfacultad;
+    }
+
+    public String getNombrefacultad() {
+        return nombrefacultad;
+    }
+
+    public void setNombrefacultad(String nombrefacultad) {
+        this.nombrefacultad = nombrefacultad;
+    }
+    
 }

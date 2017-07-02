@@ -11,4 +11,23 @@ package com.epn;
  */
 public class Cargo {
     
+    int idcargo;
+    String nombrecargo;
+
+    public String getNombrecargo() {
+        return nombrecargo;
+    }
+
+    public void setNombrecargo(String nombrecargo) {
+        this.nombrecargo = nombrecargo;
+    }
+
+    public int getIdcargo() {
+        return idcargo;
+    }
+
+    public void setIdcargo(int idcargo) {
+        this.idcargo = idcargo;
+    }
+    
 }
