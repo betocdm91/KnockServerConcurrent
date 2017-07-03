@@ -18,7 +18,7 @@ public class KnockKnockServer {
     public static Integer contadorClientes = 0;
 
     public static void main(String[] args) throws IOException, InterruptedException {
-
+  
 //        if (args.length != 1) {
         //System.err.println("Usage: java KnockKnockServer <port number>");
 //            System.exit(1);
@@ -32,7 +32,7 @@ public class KnockKnockServer {
                 System.out.println("Contador clientes en el servidor:" + contadorClientes);
                 if (contadorClientes <= 10) {
                     new Conexion(serverSocket.accept(), contadorClientes, new File("log" + contadorClientes + ".txt")).start();
-                    incrementCount();
+                    incrementCount();                  
                 } else {
                     while (contadorClientes > 10) {
 //                        serverSocket.

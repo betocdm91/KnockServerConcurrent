@@ -10,10 +10,19 @@ package com.epn;
  * @author Aspire
  */
 public class Facultad {
+
+    public Facultad(int idfacultad, String nombrefacultad) {
+        this.idfacultad = idfacultad;
+        this.nombrefacultad = nombrefacultad;
+    }
     
     int idfacultad;
     String nombrefacultad;
 
+    public Facultad() {
+    }
+
+    
     public int getIdfacultad() {
         return idfacultad;
     }

@@ -11,10 +11,19 @@ package com.epn;
  */
 public class Persona {
 
+    public Persona(int idpersona, String usuario, String contaseña) {
+        this.idpersona = idpersona;
+        this.usuario = usuario;
+        this.contaseña = contaseña;
+    }
+
+    public Persona() {
+    }
+
     int idpersona;
     String usuario;
     String contaseña;
-    
+
     public int getIdpersona() {
         return idpersona;
     }

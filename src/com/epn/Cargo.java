@@ -10,6 +10,14 @@ package com.epn;
  * @author Aspire
  */
 public class Cargo {
+
+    public Cargo(int idcargo, String nombrecargo) {
+        this.idcargo = idcargo;
+        this.nombrecargo = nombrecargo;
+    }
+
+    public Cargo() {
+    }
     
     int idcargo;
     String nombrecargo;
