@@ -60,7 +60,7 @@ public class Controlador {
 		catch( SQLException e ) {				
 			e.getSQLState();				
 			String message="<html><p><b>La consulta ejecutada fue: </b>" +queryBusqueda+" </p>" +
-					"<p><b>Error de Mysql: </b> "+e.getMessage() +  "</p> " +
+					"<p><b>Error de SQLServer: </b> "+e.getMessage() +  "</p> " +
 					"<p><b>Error codigo: </b>" + e.getErrorCode()+" </p></html>";
 			System.out.println(queryBusqueda);
 			JOptionPane.showMessageDialog(new JFrame(), message);
@@ -148,5 +148,5 @@ public class Controlador {
 		
 	}*/
 
-
+    
 }

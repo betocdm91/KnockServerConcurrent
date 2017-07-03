@@ -12,15 +12,24 @@ package com.epn;
 import static com.epn.KnockKnockServer.contadorClientes;
 import java.net.*;
 import java.io.*;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.sql.Statement;
 import java.text.SimpleDateFormat;
 import java.util.Calendar;
 import java.util.Date;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+import static javax.swing.text.html.HTML.Tag.SELECT;
 
 public class Conexion extends Thread {
 
     private Socket socket = null;
     private Integer cliente;
     private File file;
+    String name=null;
+    private Statement stm;
+    private ResultSet queryBusqueda;
 
     public Conexion(Socket socket, Integer cliente, File file) {
         super("Conexion");
@@ -40,12 +49,26 @@ public class Conexion extends Thread {
     }
 
     public void run() {
-
+        
+        
+        Controlador conex=new Controlador();
+        
         try (
                 PrintWriter out = new PrintWriter(socket.getOutputStream(), true);
                 BufferedReader in = new BufferedReader(
                         new InputStreamReader(
                                 socket.getInputStream()));) {
+            
+//        try {
+//            queryBusqueda = stm.executeQuery("SELECT * FROM " + "Persona" + " WHERE nombre = ‘"+ nombre +"‘ LIMIT 1");
+//            queryBusqueda.next();
+//            name = queryBusqueda.getString(2);
+//            conex.consulta(queryBusqueda);
+//        } catch (SQLException ex) {
+//            Logger.getLogger(Conexion.class.getName()).log(Level.SEVERE, null, ex);
+//        }
+            
+            
             FileWriter bufferedWriter;
             File fileUsuarios = new File("Usuarios.txt");
             FileReader fileReader = new FileReader(fileUsuarios);
